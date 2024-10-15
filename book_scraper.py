@@ -35,8 +35,7 @@ def scrape_books_from_page(soup):
 def save_data_to_file(data, file_name_csv="books.csv", file_name_excel="books.xlsx"):
     """Saves the scraped data into both CSV and Excel formats."""
     df = pd.DataFrame(data)
-
-    # Save to CSV and Excel directly in the current directory
+    
     df.to_csv(file_name_csv, index=False)
     df.to_excel(file_name_excel, index=False)
 
@@ -71,7 +70,7 @@ def scrape_books(base_url, headers):
     return all_data
 
 
-# Program entry point
+
 if __name__ == "__main__":
     BASE_URL = "https://books.toscrape.com/catalogue/"
 
